@@ -22,7 +22,6 @@ dist/
 
 # Maven
 target/
-dist/
 
 # JetBrains IDE
 .idea/
@@ -51,12 +50,10 @@ Thumbs.db
 
 *.iml
 .gradle
-.DS_Store
 /build
 /captures
 .externalNativeBuild
 /modules
-.idea/
 DataAccessLayer/
 *.apk
 /.gradle/
@@ -65,4 +62,3 @@ DataAccessLayer/
 /gradle/
 /.idea/
 .gradle/
-/.idea/
