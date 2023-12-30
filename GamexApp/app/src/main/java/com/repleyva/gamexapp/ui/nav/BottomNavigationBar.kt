@@ -12,11 +12,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.repleyva.core.theme.Neutral50
-import com.repleyva.core.theme.Primary50
-import com.repleyva.gamexapp.ui.NavGraphs
-import com.repleyva.gamexapp.ui.appCurrentDestinationAsState
-import com.repleyva.gamexapp.ui.startAppDestination
+import com.repleyva.gamexapp.ui.flow.NavGraphs
+import com.repleyva.gamexapp.ui.flow.appCurrentDestinationAsState
+import com.repleyva.gamexapp.ui.flow.startAppDestination
+import com.repleyva.gamexapp.ui.theme.Neutral50
+import com.repleyva.gamexapp.ui.theme.Primary50
 
 @Composable
 fun BottomNavigationBar(

@@ -3,9 +3,9 @@ package com.repleyva.gamexapp.ui.nav
 import androidx.annotation.StringRes
 import com.ramcosta.composedestinations.spec.DirectionDestinationSpec
 import com.repleyva.gamexapp.R
-import com.repleyva.gamexapp.ui.destinations.BookmarkScreenDestination
-import com.repleyva.gamexapp.ui.destinations.HomeScreenDestination
-import com.repleyva.gamexapp.ui.destinations.SearchScreenDestination
+import com.repleyva.gamexapp.ui.flow.destinations.BookmarkScreenDestination
+import com.repleyva.gamexapp.ui.flow.destinations.HomeScreenDestination
+import com.repleyva.gamexapp.ui.flow.destinations.SearchScreenDestination
 
 enum class BottomBarDestination(
     val direction: DirectionDestinationSpec,

@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.core.view.WindowCompat
-import com.repleyva.core.theme.GamexAppTheme
+import com.repleyva.gamexapp.ui.theme.GamexAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
