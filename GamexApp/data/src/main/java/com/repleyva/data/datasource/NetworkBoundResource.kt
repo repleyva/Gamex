@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.*
 abstract class NetworkBoundResource<ResultType : Any, RequestType> {
 
     private var resource: Flow<Resource<ResultType>> = flow {
-        val dbSource = loadFromDB().first()
+        val dbSource = loadFromDB().firstOrNull()
         if (shouldFetch(dbSource)) {
             emit(Resource.Loading)
             createCall().let {

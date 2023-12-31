@@ -10,52 +10,52 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 class LocalDataSourceImpl @Inject constructor(
-    private val appDatabase: GameDatabase,
+    private val appDatabase: GameDao,
 ) : LocalDataSource {
 
     override fun getAllGames(): Flow<List<GameDbDto>> {
-        return appDatabase.gameDao().getAllGames()
+        return appDatabase.getAllGames()
     }
 
     override fun getHotGames(): Flow<List<GameDbDto>> {
-        return appDatabase.gameDao().getHotGames(getLastMonthDate())
+        return appDatabase.getHotGames(getLastMonthDate())
     }
 
     override fun searchGames(query: String): Flow<List<GameDbDto>> {
-        return appDatabase.gameDao().searchGames(query)
+        return appDatabase.searchGames(query)
     }
 
     override fun getGameDetail(id: Long): Flow<GameDbDto?> {
-        return appDatabase.gameDao().getGameDetails(id)
+        return appDatabase.getGameDetails(id)
     }
 
     override suspend fun setIsFavorites(
         isFavorites: Boolean,
         id: Long,
     ) {
-        appDatabase.gameDao().setIsFavorites(isFavorites, id)
+        appDatabase.setIsFavorites(isFavorites, id)
     }
 
     override fun getAllFavoriteGames(): Flow<List<GameDbDto>> {
-        return appDatabase.gameDao().getAllFavoriteGames()
+        return appDatabase.getAllFavoriteGames()
     }
 
     override suspend fun insertGames(games: List<GameDbDto>) {
-        appDatabase.gameDao().insertGames(games)
+        appDatabase.insertGames(games)
     }
 
     override suspend fun updateGameDescription(
         id: Long,
         description: String,
     ) {
-        appDatabase.gameDao().updateGameDescription(id, description)
+        appDatabase.updateGameDescription(id, description)
     }
 
     override suspend fun updateGameTrailer(
         id: Long,
         trailerUrl: String,
     ) {
-        appDatabase.gameDao().updateGameTrailer(id, trailerUrl)
+        appDatabase.updateGameTrailer(id, trailerUrl)
     }
 
 }
